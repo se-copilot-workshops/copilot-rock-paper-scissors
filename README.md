@@ -23,3 +23,13 @@ We recommend you use CodeTour to help walk you through this exercise. You can fi
 You can follow the instructions available here: [stepbystep.md](./.instructions/stepbystep.md)
 
 <img width="1059" alt="Rock Paper Scissors image" src="./assets/Rock Paper Scissors image.png">
+
+## Additional Challenges
+After the CodeTour is complete, you can try the following challenges:
+
+- Add Lizard, Spock, and other options to the game
+- Add a score counter
+- Add a REST API endpoint to play the game
+- Add unit tests to the game
+...
+😉 Remember to have fun!
