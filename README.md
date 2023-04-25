@@ -33,3 +33,5 @@ After the CodeTour is complete, you can try the following challenges:
 - Add unit tests to the game
 ...
 😉 Remember to have fun!
+
+<img width="1059" alt="Rock Paper Scissors Lizard Spock image" src="./assets/RockPaperScissorsLizardSpock.jpg">
