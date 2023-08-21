@@ -8,7 +8,8 @@
 		"vscode": {
 			"extensions": [
 				"vsls-contrib.codetour",
-				"GitHub.copilot"
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
 			]
 		}
 	}
