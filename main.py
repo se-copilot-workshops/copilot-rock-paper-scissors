@@ -1,15 +1,36 @@
 from flask import Flask, request, jsonify
 import random
 
+CHOICES = ["rock", "paper", "scissors"]
+
 app = Flask(__name__)
+
+
+def rock_paper_scissors(player_choice):
+    if player_choice not in CHOICES:
+        raise ValueError("Invalid choice")
+
+    computer_choice = random.choice(CHOICES)
+
+    if player_choice == computer_choice:
+        result = "It's a tie!"
+    elif (
+        (player_choice == "rock" and computer_choice == "scissors")
+        or (player_choice == "paper" and computer_choice == "rock")
+        or (player_choice == "scissors" and computer_choice == "paper")
+    ):
+        result = "You win!"
+    else:
+        result = "You lose!"
+
+    return computer_choice, result
 
 
 @app.route("/play", methods=["GET"])
 def play():
     user_choice = request.args.get("choice")
-    choices = ["rock", "paper", "scissors"]
 
-    if user_choice not in choices:
+    if user_choice not in CHOICES:
         return (
             jsonify(
                 {"error": "Invalid choice. Please choose rock, paper, or scissors."}
@@ -17,17 +38,7 @@ def play():
             400,
         )
 
-    computer_choice = random.choice(choices)
-    if user_choice == computer_choice:
-        result = "It's a tie!"
-    elif (
-        (user_choice == "rock" and computer_choice == "scissors")
-        or (user_choice == "scissors" and computer_choice == "paper")
-        or (user_choice == "paper" and computer_choice == "rock")
-    ):
-        result = "You win!"
-    else:
-        result = "You lose!"
+    computer_choice, result = rock_paper_scissors(user_choice)
 
     return jsonify(
         {
