@@ -1,36 +1,42 @@
+from flask import Flask, request, jsonify
 import random
 
+app = Flask(__name__)
 
-def rock_paper_scissors():
+
+@app.route("/play", methods=["GET"])
+def play():
+    user_choice = request.args.get("choice")
     choices = ["rock", "paper", "scissors"]
+
+    if user_choice not in choices:
+        return (
+            jsonify(
+                {"error": "Invalid choice. Please choose rock, paper, or scissors."}
+            ),
+            400,
+        )
+
     computer_choice = random.choice(choices)
-
-    user_choice = input("Enter your choice (rock, paper, scissors): ")
-    while user_choice not in choices:
-        print("Invalid choice. Please try again.")
-        user_choice = input("Enter your choice (rock, paper, scissors): ")
-
-    print("Computer chose: ", computer_choice)
-
     if user_choice == computer_choice:
-        return "It's a tie!"
-    if (
+        result = "It's a tie!"
+    elif (
         (user_choice == "rock" and computer_choice == "scissors")
         or (user_choice == "scissors" and computer_choice == "paper")
         or (user_choice == "paper" and computer_choice == "rock")
     ):
-        return "You win!"
+        result = "You win!"
     else:
-        return "You lose!"
+        result = "You lose!"
 
-
-def main():
-    while True:
-        print(rock_paper_scissors())
-        play_again = input("Do you want to quit? (yes/no): ")
-        if play_again.lower() == "yes":
-            break
+    return jsonify(
+        {
+            "user_choice": user_choice,
+            "computer_choice": computer_choice,
+            "result": result,
+        }
+    )
 
 
 if __name__ == "__main__":
-    main()
+    app.run(debug=True)
