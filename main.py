@@ -32,9 +32,7 @@ def play():
 
     if user_choice not in CHOICES:
         return (
-            jsonify(
-                {"error": "Invalid choice. Please choose rock, paper, or scissors."}
-            ),
+            jsonify({"error": f"Invalid choice. Please choose from {CHOICES}."}),
             400,
         )
 
