@@ -25,7 +25,11 @@ def rock_paper_scissors():
 
 
 def main():
-    print(rock_paper_scissors())
+    while True:
+        print(rock_paper_scissors())
+        play_again = input("Do you want to quit? (yes/no): ")
+        if play_again.lower() == "yes":
+            break
 
 
 if __name__ == "__main__":
