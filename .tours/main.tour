@@ -4,12 +4,12 @@
   "steps": [
     {
       "title": "Introduction",
-      "description": "Hi there! this is a guided tour to help you learn GitHub Copilot. We will build a rock, paper, scissors game with Python.\n\nPress `Next` to to get started 👇"
+      "description": "Hi there! This is a guided tour to help you learn GitHub Copilot. We will build a rock, paper, scissors game with Python.\n\nPress `Next` to to get started 👇"
     },
     {
       "file": "main.py",
       "line": 1,
-      "description": "Let's give GitHub Copilot some context about what we're building. Let's start by adding the following comment to the file line of the main.py file. \n\n```python\n# Write a rock, paper, scissors game\n```\n\n\nPress `Next` to to get continue 👇"
+      "description": "Let's give GitHub Copilot some context about what we're building. Let's start by adding the following comment to the first line of the main.py file. \n\n```python\n# Write a rock, paper, scissors game\n```\n\n\nPress `Next` to to get continue 👇"
     },
     {
       "file": "main.py",
