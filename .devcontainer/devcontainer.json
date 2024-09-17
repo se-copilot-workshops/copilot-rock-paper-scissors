@@ -6,13 +6,21 @@
 	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
 	"customizations": {
 		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"jupyter.kernels.excludePythonEnvironments": [
+					"/usr/bin/python3"	]
+			},
 			"extensions": [
 				"vsls-contrib.codetour",
 				"GitHub.copilot",
-				"GitHub.copilot-chat"
+				"GitHub.copilot-chat",
+				"ms-python.python",
+				"ms-toolsai.jupyter",
+				"donjayamanne.vscode-default-python-kernel"
 			]
 		}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -21,7 +29,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	"postCreateCommand": "pip3 install --user -r requirements.txt"
 
 	// Configure tool-specific properties.
 	// "customizations": {},

@@ -40,7 +40,7 @@ In this project you will find:
 * an `.instructions` folder all the instructions for this workshop.
 * an `assets` folder containing images used in this workshop documentation.
 * a `.tours` folder that includes the CodeTour file if you wish to use it.
-
+* a `notebooks` folder that includes the Jupyter Notebook file if you wish to it.
 
 
 
