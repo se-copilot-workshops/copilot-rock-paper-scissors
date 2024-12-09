@@ -12,7 +12,7 @@ Participants will be guided to install the GitHub Copilot VS Code extension, fol
 
 Depending on the time available, participants will be able to complete the game or just get started, from a simple version all the way to introducing additional logic to make the game more interesting complete, with unit tests and REST API endpoints.
 
-
+Python is the language of choice for this workshop, but the principles can be applied to any language supported by GitHub Copilot. There is a version of the workshop for C# developers available in the dotnet folder.  
 
 ## Instructions 
 

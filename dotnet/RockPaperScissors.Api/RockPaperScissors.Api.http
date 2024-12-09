@@ -1,0 +1,19 @@
+@baseUrl = http://localhost:5179
+
+### Play a game with Rock
+POST {{baseUrl}}/game/play
+Content-Type: application/json
+
+"Rock"
+
+### Play a game with Paper
+POST {{baseUrl}}/game/play
+Content-Type: application/json
+
+"Paper"
+
+### Play a game with Scissors
+POST {{baseUrl}}/game/play
+Content-Type: application/json
+
+"Scissors"
